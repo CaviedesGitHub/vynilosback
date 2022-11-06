@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="vynsAlbum"
+            type="com.miso.vyns.model.VynsAlbum" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/pruebaParam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/id_album"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1234567890"/>
+
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/titulo_album"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{vynsAlbum.name}"/>
+
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/genero_album"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{vynsAlbum.genre}"/>
+
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rl_album"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{vynsAlbum.recordLabel}"/>
+
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/fecha_album"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{vynsAlbum.releaseDate}"/>
+
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cover_album"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{vynsAlbum.cover}"/>
+
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/desc_album"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{vynsAlbum.description}"/>
+
+            <ImageView
+                android:id="@+id/imgCover"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:srcCompat="@tools:sample/avatars"
+                app:loadImage="@{vynsAlbum.cover}" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

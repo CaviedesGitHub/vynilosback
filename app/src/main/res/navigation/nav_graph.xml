@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/vynsFragment">
+
+    <fragment
+        android:id="@+id/vynsFragment"
+        android:name="com.miso.vyns.VynsFragment"
+        android:label="VynsFragment" >
+        <action
+            android:id="@+id/action_vynsFragment_to_albumListFragment"
+            app:destination="@id/albumListFragment" />
+        <action
+            android:id="@+id/action_vynsFragment_to_artistaListFragment"
+            app:destination="@id/artistaListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/albumListFragment"
+        android:name="com.miso.vyns.AlbumListFragment"
+        android:label="AlbumListFragment" >
+        <action
+            android:id="@+id/action_albumListFragment_to_albumFragment"
+            app:destination="@id/albumFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/artistaListFragment"
+        android:name="com.miso.vyns.ArtistaListFragment"
+        android:label="ArtistaListFragment" >
+        <action
+            android:id="@+id/action_artistaListFragment_to_artistaFragment"
+            app:destination="@id/artistaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/albumFragment"
+        android:name="com.miso.vyns.AlbumFragment"
+        android:label="AlbumFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/artistaFragment"
+        android:name="com.miso.vyns.ArtistaFragment"
+        android:label="ArtistaFragment" />
+</navigation>
